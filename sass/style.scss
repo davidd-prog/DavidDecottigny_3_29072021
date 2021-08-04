@@ -6,6 +6,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "robotoregular";
+  src: url("fonts/roboto-regular-webfont.woff2") format("woff2"),
+    url("fonts/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("fonts/roboto-bold-webfont.woff2") format("woff2"),
+    url("fonts/roboto-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotolight";
+  src: url("fonts/roboto-light-webfont.woff2") format("woff2"),
+    url("fonts/roboto-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
 }
@@ -15,8 +36,42 @@ h1 {
   text-align: center;
   line-height: 0px;
   padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  box-shadow: 1px 1px 2px gray;
+  padding-bottom: 0.8em;
+  margin-bottom: 0px;
+  box-shadow: 0px 3px 4px lightgray;
+}
+
+form {
+  background-color: rgba(211, 211, 211, 0.37);
+  height: 3em;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  .destinationdéfaut {
+    border: transparent;
+    font-weight: 600;
+    background-color: rgba(211, 211, 211, 0);
+    padding-left: 15px;
+  }
+  .marqueur {
+    padding-top: 15px;
+  }
+}
+
+.accroche {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .titreaccroche {
+    font-family: "robotobold";
+    padding: 1em 1em 0 1em;
+    margin-bottom: 0.5em;
+  }
+  .phraseaccroche {
+    font-family: "robotolight";
+    margin-top: 0px;
+  }
 }
 
 @media #{$mobileview} {

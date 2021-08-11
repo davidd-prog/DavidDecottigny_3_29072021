@@ -43,13 +43,14 @@ form {
   margin-top: 0px;
   display: flex;
   justify-content: center;
-  padding-left: 20px;
+  padding-left: 65px;
 }
 form .destinationdéfaut {
   border: transparent;
   font-weight: 600;
+  font-size: 1em;
   background-color: rgba(211, 211, 211, 0);
-  padding-left: 15px;
+  padding-left: 20px;
 }
 form .marqueur {
   padding-top: 15px;
@@ -68,6 +69,20 @@ form .marqueur {
 .accroche .phraseaccroche {
   font-family: "robotolight";
   margin-top: 0px;
+  margin-bottom: 2em;
+}
+.accroche .accrocheBouton {
+  margin: auto;
+  padding: 1em;
+  font-family: "robotoregular";
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  font-size: 0.9em;
+  border-radius: 2.1em;
+}
+
+.fonctionnement {
+  margin-left: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,18 +11,16 @@
     <!--Header avec logo-->
 
     <header>
-      <h1 class="logo">ohmyfood</h1>
+      <a class="Logocliquable" href="index.html">
+        <h1 class="logo">ohmyfood</h1>
+      </a>
     </header>
     <main>
       <!--Formulaire de localisation-->
 
       <form method="POST" action="index.html">
         <i class="fas fa-map-marker-alt marqueur"></i>
-        <input
-          class="destinationdéfaut"
-          type="search"
-          value="Paris, Belleville"
-        />
+        <p class="destinationdéfaut">Paris, Belleville</p>
       </form>
       <!--Section d'accroche du site-->
 
@@ -39,17 +37,17 @@
         <h2 class="fonctionnementTitre">Fonctionnement</h2>
         <div class="fonctionnementDivision">
           <div class="fonctionnementDivisionChiffre">1</div>
-          <i class="fas fa-mobile-alt"></i>
+          <i class="fas fa-mobile-alt MobileIcone"></i>
           <div class="divisionNom">Choisissez un restaurant</div>
         </div>
         <div class="fonctionnementDivision">
           <div class="fonctionnementDivisionChiffre">2</div>
-          <i class="fas fa-list-ul"></i>
+          <i class="fas fa-list-ul ListeIcone"></i>
           <div class="divisionNom">Composez votre menu</div>
         </div>
-        <div class="fonctionnementDivision">
+        <div class="fonctionnementDivisionStore">
           <div class="fonctionnementDivisionChiffre">3</div>
-          <i class="fas fa-store"></i>
+          <i class="fas fa-store StoreIcone"></i>
           <div class="divisionNom">Dégustez au restaurant</div>
         </div>
       </section>
@@ -62,7 +60,7 @@
             <div class="RestaurantConteneurPhoto">
               <img
                 class="RestaurantPhoto"
-                src=""
+                src="Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="Plat en assiette du restaurant"
               />
               <p class="postit">Nouveau</p>
@@ -72,14 +70,14 @@
                 <h3 class="titreLégende">La palette du goût</h3>
                 <p class="Lieu">Ménilmontant</p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="far fa-heart coeur"></i>
             </div>
           </a>
           <a class="RestaurantCarte" href="note.html">
             <div class="RestaurantConteneurPhoto">
               <img
                 class="RestaurantPhoto"
-                src=""
+                src="Images/stil-u2Lp8tXIcjw-unsplash.jpg"
                 alt="Plat en assiette du restaurant"
               />
               <p class="postit">Nouveau</p>
@@ -89,14 +87,14 @@
                 <h3 class="titreLégende">La note enchantée</h3>
                 <p class="Lieu">Charonne</p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="far fa-heart coeur"></i>
             </div>
           </a>
           <a class="RestaurantCarte" href="francaise.html">
-            <div class class="RestaurantConteneurPhoto">
+            <div class="RestaurantConteneurPhoto">
               <img
                 class="RestaurantPhoto"
-                src=""
+                src="Images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt="Plat en assiette du restaurant"
               />
             </div>
@@ -105,14 +103,14 @@
                 <h3 class="titreLégende">A la française</h3>
                 <p class="Lieu">Cité Rouge</p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="far fa-heart coeur"></i>
             </div>
           </a>
           <a class="RestaurantCarte" href="delice.html">
             <div class="RestaurantConteneurPhoto">
               <img
                 class="RestaurantPhoto"
-                src=""
+                src="Images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="Plat sur longue assiette du restaurant"
               />
             </div>
@@ -121,7 +119,7 @@
                 <h3 class="titreLégende">Le délice des sens</h3>
                 <p class="Lieu">Folie-Méricourt</p>
               </div>
-              <i class="far fa-heart"></i>
+              <i class="far fa-heart coeur"></i>
             </div>
           </a>
         </div>
@@ -133,10 +131,10 @@
       <h1 class="footerTitre">ohmyfood</h1>
       <section class="Infos">
         <a class="InfosItem" href="#">
-          <i class="fas fa-utensils"></i>Proposer un restaurant
+          <i class="fas fa-utensils IconeRestau"></i>Proposer un restaurant
         </a>
         <a class="InfosItem" href="#">
-          <i class="fas fa-hands-helping"></i>Devenir partenaire
+          <i class="fas fa-hands-helping IconeMains"></i>Devenir partenaire
         </a>
         <a class="InfosItem" href="#">Mentions légales</a>
         <a class="InfosItem" href="#">Contact</a>

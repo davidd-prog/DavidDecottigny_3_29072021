@@ -35,6 +35,10 @@ body {
   margin: 0;
 }
 
+header {
+  background: #f2f2f2;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -44,9 +48,10 @@ a {
   font-family: "shrikhandregular";
   text-align: center;
   line-height: 0px;
-  padding-top: 0.5em;
+  padding-top: 1em;
   padding-bottom: 0.8em;
   margin-bottom: 0px;
+  margin-top: 0px;
   box-shadow: 0px 3px 4px lightgray;
 }
 
@@ -209,16 +214,14 @@ form {
 
 .LégendePhoto {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding-right: 1em;
   .LégendePhotoDescription {
     line-height: 0.3em;
     padding: 0.5em 0 0.5em 0.7em;
   }
   .coeur {
-    display: flex;
-    align-items: center;
-    padding-bottom: 0.3em;
-    padding-right: 1em;
     font-size: 1.3em;
   }
 }
@@ -266,7 +269,7 @@ footer {
 
 .FlècheRetour {
   position: absolute;
-  top: 1.8em;
+  top: 1.5em;
   left: 1.5em;
 }
 
@@ -285,6 +288,17 @@ footer {
   border-radius: 30px 30px 0 0;
   margin-top: -2em;
   position: relative;
+  .CarteMenuConteneur {
+    @extend .LégendePhoto;
+  }
+  .Plats {
+    font-family: "robotoregular";
+    display: block;
+  }
+}
+
+.CoeurMenu {
+  font-size: 1.4em;
 }
 
 .CarteMenuTitre {

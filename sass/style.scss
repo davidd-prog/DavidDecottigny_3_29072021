@@ -28,6 +28,8 @@
   font-style: normal;
 }
 
+@import "mixins.scss";
+
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
@@ -92,15 +94,8 @@ form {
   }
   .accrocheBouton {
     margin: auto;
-    padding: 1em 1.5em;
-    font-family: "robotoregular";
-    background: linear-gradient($secondary, $primary);
-    color: white;
-    font-size: 0.9em;
-    border-radius: 2.1em;
-    box-shadow: 0px 3px 4px lightgray;
-    cursor: pointer;
     margin-bottom: 4em;
+    @include bouton;
   }
 }
 
@@ -290,11 +285,56 @@ footer {
   position: relative;
   .CarteMenuConteneur {
     @extend .LégendePhoto;
+    padding-right: 2em;
   }
   .Plats {
     font-family: "robotoregular";
     display: block;
   }
+}
+
+.PlatsTitre {
+  font-family: "robotolight";
+  font-weight: 300;
+  font-size: 1em;
+  border-bottom: 3px solid $tertiary;
+  width: 12%;
+}
+
+.DétailMenu {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0px 3px 4px lightgray;
+  .DétailMenuEcriture {
+    padding-bottom: 0.2em;
+  }
+  .DétailMenuPrix {
+    font-size: 0.8em;
+    padding-top: 1.9em;
+  }
+}
+
+.DétailMenuLégende {
+  margin-bottom: 0.3em;
+  margin-top: 0.5em;
+}
+
+.DétailMenuLégendeDescription {
+  font-family: "robotolight";
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  width: 230px;
 }
 
 .CoeurMenu {
@@ -303,4 +343,14 @@ footer {
 
 .CarteMenuTitre {
   font-family: "shrikhandregular";
+}
+
+/* Le bouton de validation de commande */
+
+.Commander {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3em 4.5em;
+  @include bouton;
 }

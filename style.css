@@ -95,6 +95,11 @@ form .marqueur {
   box-shadow: 0px 3px 4px lightgray;
   cursor: pointer;
 }
+.accroche .accrocheBouton:hover {
+  filter: brightness(1.1);
+  transition-duration: 0.25s;
+  box-shadow: 3px 3px 5px gray;
+}
 
 .fonctionnement {
   margin-left: 0.8em;
@@ -352,6 +357,11 @@ footer .Infos {
   border-radius: 2.1em;
   box-shadow: 0px 3px 4px lightgray;
   cursor: pointer;
+}
+.Commander:hover {
+  filter: brightness(1.1);
+  transition-duration: 0.25s;
+  box-shadow: 3px 3px 5px gray;
 }
 
 /*# sourceMappingURL=style.css.map */

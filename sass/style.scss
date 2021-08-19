@@ -96,6 +96,11 @@ form {
     margin: auto;
     margin-bottom: 4em;
     @include bouton;
+    &:hover {
+      filter: brightness(1.1);
+      transition-duration: 0.25s;
+      box-shadow: 3px 3px 5px gray;
+    }
   }
 }
 
@@ -353,4 +358,9 @@ footer {
   justify-content: center;
   margin: 3em 4.5em;
   @include bouton;
+  &:hover {
+    filter: brightness(1.1);
+    transition-duration: 0.25s;
+    box-shadow: 3px 3px 5px gray;
+  }
 }

@@ -337,8 +337,9 @@ footer {
     justify-content: center;
     align-items: center;
     margin: -1em -5em -1em 1em;
-    width: 4em;
+    width: 3em;
     height: 3.8em;
+    transition-duration: 1s;
     .boiteCoche {
       height: 1.7em;
       width: 1.7em;
@@ -352,6 +353,9 @@ footer {
         font-size: 1.9em;
       }
     }
+  }
+  &:hover .selection {
+    margin-right: -1em;
   }
 }
 

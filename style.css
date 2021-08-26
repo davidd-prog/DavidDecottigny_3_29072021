@@ -94,10 +94,10 @@ form .marqueur {
   border-radius: 2.1em;
   box-shadow: 0px 3px 4px lightgray;
   cursor: pointer;
+  transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
 }
 .accroche .accrocheBouton:hover {
   filter: brightness(1.1);
-  transition-duration: 0.25s;
   box-shadow: 3px 3px 5px gray;
 }
 
@@ -219,6 +219,10 @@ form .marqueur {
 }
 .LégendePhoto .coeur, .CarteMenu .CarteMenuConteneur .coeur {
   font-size: 1.3em;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .titreLégende {
@@ -295,11 +299,14 @@ footer .Infos {
   width: 2.5em;
 }
 
+.Conteneur {
+  display: flex;
+}
+
 .DétailMenu {
   background: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-right: 1em;
   margin-bottom: 1em;
   padding-left: 0.5em;
@@ -308,11 +315,37 @@ footer .Infos {
   box-shadow: 0px 3px 4px lightgray;
 }
 .DétailMenu .DétailMenuEcriture {
+  flex: 1;
   padding-bottom: 0.2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .DétailMenu .DétailMenuPrix {
   font-size: 0.8em;
   padding-top: 1.9em;
+}
+.DétailMenu .selection {
+  background: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -1em -5em -1em 1em;
+  width: 4em;
+  height: 3.8em;
+}
+.DétailMenu .selection .boiteCoche {
+  height: 1.7em;
+  width: 1.7em;
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.DétailMenu .selection .boiteCoche .coche {
+  color: #99e2d0;
+  font-size: 1.9em;
 }
 
 .DétailMenuLégende {
@@ -328,7 +361,7 @@ footer .Infos {
   text-overflow: ellipsis;
   margin-top: 0;
   margin-bottom: 0.5em;
-  width: 230px;
+  width: auto;
 }
 
 .CoeurMenu {
@@ -353,11 +386,13 @@ footer .Infos {
   border-radius: 2.1em;
   box-shadow: 0px 3px 4px lightgray;
   cursor: pointer;
+  transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
 }
 .Commander:hover {
   filter: brightness(1.1);
-  transition-duration: 0.25s;
   box-shadow: 3px 3px 5px gray;
 }
+
+/* Exercices liés au cours sur les animations */
 
 /*# sourceMappingURL=style.css.map */

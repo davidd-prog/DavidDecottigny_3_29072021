@@ -96,9 +96,9 @@ form {
     margin: auto;
     margin-bottom: 4em;
     @include bouton;
+    transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
     &:hover {
       filter: brightness(1.1);
-      transition-duration: 0.25s;
       box-shadow: 3px 3px 5px gray;
     }
   }
@@ -223,6 +223,10 @@ form {
   }
   .coeur {
     font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
   }
 }
 .titreLégende {
@@ -303,12 +307,13 @@ footer {
   border-bottom: 3px solid $tertiary;
   width: 2.5em;
 }
-
+.Conteneur {
+  display: flex;
+}
 .DétailMenu {
   background: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-right: 1em;
   margin-bottom: 1em;
   padding-left: 0.5em;
@@ -316,11 +321,37 @@ footer {
   border-radius: 10px;
   box-shadow: 0px 3px 4px lightgray;
   .DétailMenuEcriture {
+    flex: 1;
     padding-bottom: 0.2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .DétailMenuPrix {
     font-size: 0.8em;
     padding-top: 1.9em;
+  }
+  .selection {
+    background: $tertiary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -1em -5em -1em 1em;
+    width: 4em;
+    height: 3.8em;
+    .boiteCoche {
+      height: 1.7em;
+      width: 1.7em;
+      border-radius: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .coche {
+        color: $tertiary;
+        font-size: 1.9em;
+      }
+    }
   }
 }
 
@@ -337,7 +368,7 @@ footer {
   text-overflow: ellipsis;
   margin-top: 0;
   margin-bottom: 0.5em;
-  width: 230px;
+  width: auto;
 }
 
 .CoeurMenu {
@@ -356,9 +387,11 @@ footer {
   justify-content: center;
   margin: 3em 4.5em;
   @include bouton;
+  transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
   &:hover {
     filter: brightness(1.1);
-    transition-duration: 0.25s;
     box-shadow: 3px 3px 5px gray;
   }
 }
+
+/* Exercices liés au cours sur les animations */

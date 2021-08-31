@@ -29,7 +29,7 @@
 }
 
 @import "mixins.scss";
-
+@import "keyframes.scss";
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
@@ -222,11 +222,23 @@ form {
     padding: 0.5em 0 0.5em 0.7em;
   }
   .coeur {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    &:hover {
+      animation: coeur-anim 1s;
+      font-weight: bold;
+      background: linear-gradient($primary, $secondary);
+      background: -webkit-linear-gradient($primary, $secondary);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:hover::before {
+      -webkit-text-stroke-color: transparent;
+    }
   }
 }
 .titreLégende {
@@ -293,6 +305,10 @@ footer {
   position: relative;
   .CarteMenuConteneur {
     @extend .LégendePhoto;
+    .CoeurMenu {
+      @include coeur-rempli;
+      cursor: pointer;
+    }
   }
   .Plats {
     font-family: "robotoregular";
@@ -317,29 +333,36 @@ footer {
   padding-right: 1em;
   margin-bottom: 1em;
   padding-left: 0.5em;
+  height: 3.8em;
   width: auto;
   border-radius: 10px;
   box-shadow: 0px 3px 4px lightgray;
+  overflow: hidden;
+  cursor: pointer;
   .DétailMenuEcriture {
     flex: 1;
     padding-bottom: 0.2em;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    transition-duration: 1s;
   }
   .DétailMenuPrix {
     font-size: 0.8em;
     padding-top: 1.9em;
+    transform: translateX(0px);
+    transition-duration: 1s;
   }
   .selection {
     background: $tertiary;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: -1em -5em -1em 1em;
+    margin: -1em -5em -1em 2em;
     width: 3em;
     height: 3.8em;
     transition-duration: 1s;
+    transform: translateX(0px);
     .boiteCoche {
       height: 1.7em;
       width: 1.7em;
@@ -348,6 +371,8 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
+      transform: rotate(-270deg);
+      transition-duration: 1s;
       .coche {
         color: $tertiary;
         font-size: 1.9em;
@@ -355,11 +380,23 @@ footer {
     }
   }
   &:hover .selection {
-    margin-right: -1em;
+    transform: translateX(-63px);
+  }
+  &:hover .DétailMenuPrix {
+    transform: translateX(-63px);
+  }
+  &:hover .DétailMenuEcriture {
+    margin-right: 63px;
+  }
+  &:hover .boiteCoche {
+    transform: rotate(0deg);
   }
 }
 
 .DétailMenuLégende {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 0.3em;
   margin-top: 0.5em;
 }

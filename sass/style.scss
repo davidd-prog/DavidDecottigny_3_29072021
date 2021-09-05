@@ -213,22 +213,31 @@ form {
 }
 
 .LégendePhoto {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-between;
   padding-right: 1em;
-  .LégendePhotoDescription {
-    line-height: 0.3em;
-    padding: 0.5em 0 0.5em 0.7em;
-  }
+  line-height: 0.3em;
+  padding: 0.5em 0 0.5em 0.7em;
+}
+
+.conteneur-coeur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+
   .coeur {
+    z-index: 1;
+    margin-top: -4.8em;
     font-size: 1.5em;
     font-weight: bold;
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    cursor: pointer;
     &:hover {
-      animation: coeur-anim 1s;
+      animation: coeur-anim 2s;
       font-weight: bold;
       background: linear-gradient($primary, $secondary);
       background: -webkit-linear-gradient($primary, $secondary);
@@ -241,6 +250,7 @@ form {
     }
   }
 }
+
 .titreLégende {
   font-family: "robotoregular";
   font-size: 1em;
@@ -304,10 +314,14 @@ footer {
   margin-top: -2em;
   position: relative;
   .CarteMenuConteneur {
-    @extend .LégendePhoto;
+    @extend .conteneur-coeur;
+    display: flex;
+    justify-content: left;
+    width: 100%;
     .CoeurMenu {
       @include coeur-rempli;
       cursor: pointer;
+      margin-left: 1em;
     }
   }
   .Plats {
@@ -434,5 +448,3 @@ footer {
     box-shadow: 3px 3px 5px gray;
   }
 }
-
-/* Exercices liés au cours sur les animations */

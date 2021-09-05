@@ -215,25 +215,33 @@ form .marqueur {
   border-radius: 2px;
 }
 
-.LégendePhoto, .CarteMenu .CarteMenuConteneur {
-  display: flex;
+.LégendePhoto {
+  display: block;
   align-items: center;
   justify-content: space-between;
   padding-right: 1em;
-}
-.LégendePhoto .LégendePhotoDescription, .CarteMenu .CarteMenuConteneur .LégendePhotoDescription {
   line-height: 0.3em;
   padding: 0.5em 0 0.5em 0.7em;
 }
-.LégendePhoto .coeur, .CarteMenu .CarteMenuConteneur .coeur {
+
+.conteneur-coeur, .CarteMenu .CarteMenuConteneur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+}
+.conteneur-coeur .coeur, .CarteMenu .CarteMenuConteneur .coeur {
+  z-index: 1;
+  margin-top: -4.8em;
   font-size: 1.5em;
   font-weight: bold;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
+  cursor: pointer;
 }
-.LégendePhoto .coeur:hover, .CarteMenu .CarteMenuConteneur .coeur:hover {
-  animation: coeur-anim 1s;
+.conteneur-coeur .coeur:hover, .CarteMenu .CarteMenuConteneur .coeur:hover {
+  animation: coeur-anim 2s;
   font-weight: bold;
   background: linear-gradient(#9356dc, #ff79da);
   background: -webkit-linear-gradient(#9356dc, #ff79da);
@@ -241,7 +249,7 @@ form .marqueur {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.LégendePhoto .coeur:hover::before, .CarteMenu .CarteMenuConteneur .coeur:hover::before {
+.conteneur-coeur .coeur:hover::before, .CarteMenu .CarteMenuConteneur .coeur:hover::before {
   -webkit-text-stroke-color: transparent;
 }
 
@@ -306,6 +314,11 @@ footer .Infos {
   margin-top: -2em;
   position: relative;
 }
+.CarteMenu .CarteMenuConteneur {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
 .CarteMenu .CarteMenuConteneur .CoeurMenu {
   font-size: 1.5em;
   font-weight: bold;
@@ -313,6 +326,7 @@ footer .Infos {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   cursor: pointer;
+  margin-left: 1em;
 }
 .CarteMenu .CarteMenuConteneur .CoeurMenu:hover {
   animation: coeur-anim 1s;
@@ -457,7 +471,5 @@ footer .Infos {
   filter: brightness(1.1);
   box-shadow: 3px 3px 5px gray;
 }
-
-/* Exercices liés au cours sur les animations */
 
 /*# sourceMappingURL=style.css.map */

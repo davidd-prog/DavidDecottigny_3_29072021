@@ -33,6 +33,9 @@
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
+$anim-dur: 1s;
+$num-menus: 3;
+$anim-delay: $anim-dur / $num-menus;
 body {
   margin: 0;
 }
@@ -327,6 +330,14 @@ footer {
   .Plats {
     font-family: "robotoregular";
     display: block;
+    animation: menu-anim $anim-dur;
+    @for $i from 1 through $num-menus {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+    }
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
   }
 }
 

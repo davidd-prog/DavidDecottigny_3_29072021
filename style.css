@@ -31,6 +31,16 @@
     opacity: 1;
   }
 }
+@keyframes menu-anim {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 body {
   margin: 0;
 }
@@ -343,6 +353,18 @@ footer .Infos {
 .CarteMenu .Plats {
   font-family: "robotoregular";
   display: block;
+  animation: menu-anim 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+.CarteMenu .Plats--1 {
+  animation-delay: 0.3333333333s;
+}
+.CarteMenu .Plats--2 {
+  animation-delay: 0.6666666667s;
+}
+.CarteMenu .Plats--3 {
+  animation-delay: 1s;
 }
 
 .PlatsTitre {

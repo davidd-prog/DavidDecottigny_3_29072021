@@ -40,6 +40,34 @@ body {
   margin: 0;
 }
 
+/* spinning loader */
+
+.loading {
+  background-color: #ff79d97e;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 900;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  animation: filtre 2s 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  &::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 15px solid #9356dc;
+    border-top-color: #99e2d0;
+    border-bottom-color: #ff79da;
+    border-radius: 50%;
+    animation: rotation 2s linear infinite;
+  }
+}
+
 header {
   background: #f2f2f2;
 }

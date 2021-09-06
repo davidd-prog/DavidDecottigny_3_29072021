@@ -139,26 +139,40 @@ form {
   margin-left: 0.8em;
   margin-top: 2.5em;
   margin-bottom: 4em;
+  @media (min-width: 768px) {
+    margin-bottom: 3em;
+  }
   .fonctionnementTitre {
     font-family: "robotobold";
   }
-  .fonctionnementDivision {
-    font-family: "robotobold";
-    font-size: 0.8em;
-    height: 4.5em;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: #f2f2f2;
-    box-shadow: 0px 3px 4px lightgray;
-    width: 90%;
-    margin-bottom: 1.5em;
-    border-radius: 1em;
-    margin-left: 1em;
-  }
-  .fonctionnementDivisionStore {
-    @extend .fonctionnementDivision;
-    background: #9256dc11;
+  .fonctionnementDivisions {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+    }
+    .fonctionnementDivision {
+      font-family: "robotobold";
+      font-size: 0.8em;
+      height: 4.5em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: #f2f2f2;
+      box-shadow: 0px 3px 4px lightgray;
+      width: 90%;
+      margin-bottom: 1.5em;
+      border-radius: 1em;
+      margin-left: 1em;
+      @media (min-width: 768px) {
+        position: relative;
+        width: 30%;
+        margin-left: 0;
+      }
+    }
+    .fonctionnementDivisionStore {
+      @extend .fonctionnementDivision;
+      background: #9256dc11;
+    }
   }
 }
 
@@ -176,6 +190,10 @@ form {
   margin-right: 1.2em;
   position: absolute;
   left: 1.6em;
+  @media (min-width: 768px) {
+    float: left;
+    left: -1em;
+  }
 }
 
 .MobileIcone {
@@ -200,21 +218,22 @@ form {
   background: #f2f2f2;
   padding-top: 2em;
   padding-bottom: 2em;
-  padding-left: 0.8em;
   .RestaurantsTitre {
     font-family: "robotobold";
+    padding-left: 0.5em;
   }
 }
 
 .RestaurantsCartes {
   display: flex;
   flex-direction: column;
+  align-items: center;
   .RestaurantCarte {
     display: block;
     position: relative;
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 96%;
     margin-bottom: 1em;
     border-radius: 10px;
     box-shadow: 0px 3px 4px lightgray;
@@ -256,7 +275,7 @@ form {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 10%;
+  margin-left: 85%;
 
   .coeur {
     z-index: 1;
@@ -303,6 +322,9 @@ footer {
     display: flex;
     flex-direction: column;
     line-height: 1.3em;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 }
 
@@ -310,6 +332,9 @@ footer {
   color: white;
   font-family: "robotoregular";
   font-size: small;
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
   .IconeRestau {
     font-size: 0.9em;
     margin-right: 1em;

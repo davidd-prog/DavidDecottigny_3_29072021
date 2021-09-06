@@ -409,6 +409,10 @@ footer .Infos {
   display: flex;
   justify-content: left;
   width: 100%;
+  margin-left: 0%;
+}
+.CarteMenu .CarteMenuConteneur .CarteMenuTitre {
+  font-family: "shrikhandregular";
 }
 .CarteMenu .CarteMenuConteneur .CoeurMenu {
   font-size: 1.5em;
@@ -548,10 +552,6 @@ footer .Infos {
 
 .CoeurMenu {
   font-size: 1.4em;
-}
-
-.CarteMenuTitre {
-  font-family: "shrikhandregular";
 }
 
 /* Le bouton de validation de commande */

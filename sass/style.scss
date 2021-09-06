@@ -374,6 +374,10 @@ footer {
     display: flex;
     justify-content: left;
     width: 100%;
+    margin-left: 0%;
+    .CarteMenuTitre {
+      font-family: "shrikhandregular";
+    }
     .CoeurMenu {
       @include coeur-rempli;
       cursor: pointer;
@@ -492,10 +496,6 @@ footer {
 
 .CoeurMenu {
   font-size: 1.4em;
-}
-
-.CarteMenuTitre {
-  font-family: "shrikhandregular";
 }
 
 /* Le bouton de validation de commande */

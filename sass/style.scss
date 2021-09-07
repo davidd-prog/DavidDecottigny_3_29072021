@@ -420,6 +420,15 @@ footer {
     }
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    @media (min-width: 1024px) {
+      width: 30%;
+    }
+  }
+  .ConteneurPlats {
+    @media (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

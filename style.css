@@ -490,6 +490,17 @@ footer .Infos {
 .CarteMenu .Plats--3 {
   animation-delay: 1s;
 }
+@media (min-width: 1024px) {
+  .CarteMenu .Plats {
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .CarteMenu .ConteneurPlats {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .PlatsTitre {
   font-family: "robotolight";

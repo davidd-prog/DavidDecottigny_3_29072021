@@ -142,10 +142,20 @@ form .marqueur {
   padding: 0 1em 0 1em;
   margin-bottom: 0.5em;
 }
+@media (min-width: 375px) {
+  .accroche .titreaccroche {
+    padding: 0 3em 0 3em;
+  }
+}
 .accroche .phraseaccroche {
   font-family: "robotolight";
   margin-top: 0px;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+}
+@media (min-width: 375px) {
+  .accroche .phraseaccroche {
+    padding: 0 2em 0 2em;
+  }
 }
 .accroche .accrocheBouton {
   margin: auto;
@@ -173,6 +183,12 @@ form .marqueur {
 @media (min-width: 768px) {
   .fonctionnement {
     margin-bottom: 3em;
+  }
+}
+@media (min-width: 1024px) {
+  .fonctionnement {
+    max-width: 900px;
+    margin: auto;
   }
 }
 .fonctionnement .fonctionnementTitre {
@@ -256,7 +272,13 @@ form .marqueur {
 }
 .Restaurants .RestaurantsTitre {
   font-family: "robotobold";
-  padding-left: 0.5em;
+}
+@media (min-width: 1024px) {
+  .Restaurants .RestaurantsTitre {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 1em;
+  }
 }
 
 .RestaurantsCartes {
@@ -264,12 +286,18 @@ form .marqueur {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .RestaurantsCartes {
+    max-width: 900px;
+    margin: auto;
+  }
+}
 .RestaurantsCartes .RestaurantCarte {
   display: block;
   position: relative;
   flex-direction: column;
   align-items: center;
-  width: 96%;
+  width: 100%;
   margin-bottom: 1em;
   border-radius: 10px;
   box-shadow: 0px 3px 4px lightgray;
@@ -299,8 +327,6 @@ form .marqueur {
 .LégendePhoto {
   display: block;
   align-items: center;
-  justify-content: space-between;
-  padding-right: 1em;
   line-height: 0.3em;
   padding: 0.5em 0 0.5em 0.7em;
 }
@@ -353,6 +379,13 @@ footer .footerTitre {
   color: white;
   font-size: medium;
 }
+@media (min-width: 1024px) {
+  footer .footerTitre {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 0.5em;
+  }
+}
 footer .Infos {
   display: flex;
   flex-direction: column;
@@ -361,6 +394,12 @@ footer .Infos {
 @media (min-width: 768px) {
   footer .Infos {
     flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  footer .Infos {
+    max-width: 900px;
+    margin: auto;
   }
 }
 

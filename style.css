@@ -351,12 +351,8 @@ form .marqueur {
   animation: coeur-anim 2s;
   font-weight: bold;
   background: linear-gradient(#9356dc, #ff79da);
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.conteneur-coeur .coeur:hover::before, .CarteMenu .CarteMenuConteneur .coeur:hover::before {
   -webkit-text-stroke-color: transparent;
 }
 
@@ -463,15 +459,11 @@ footer .Infos {
   margin-left: 1em;
 }
 .CarteMenu .CarteMenuConteneur .CoeurMenu:hover {
-  animation: coeur-anim 1s;
+  animation: coeur-anim 2s;
   font-weight: bold;
   background: linear-gradient(#9356dc, #ff79da);
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.CarteMenu .CarteMenuConteneur .CoeurMenu:hover::before {
   -webkit-text-stroke-color: transparent;
 }
 .CarteMenu .Plats {

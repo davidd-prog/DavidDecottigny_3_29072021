@@ -306,12 +306,8 @@ form {
       animation: coeur-anim 2s;
       font-weight: bold;
       background: linear-gradient($primary, $secondary);
-      background: -webkit-linear-gradient($primary, $secondary);
       -webkit-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-    &:hover::before {
       -webkit-text-stroke-color: transparent;
     }
   }

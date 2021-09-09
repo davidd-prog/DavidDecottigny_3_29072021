@@ -425,12 +425,32 @@ footer .Infos {
   top: 1.5em;
   left: 1.5em;
 }
+@media (min-width: 1024px) {
+  .FlècheRetour {
+    margin-left: 5%;
+  }
+}
+@media (min-width: 1440px) {
+  .FlècheRetour {
+    margin-left: 19%;
+  }
+}
+@media (min-width: 2560px) {
+  .FlècheRetour {
+    margin-left: 32%;
+  }
+}
 
 /* Le menu */
 .MenuPhoto {
   object-fit: cover;
   height: 180px;
   width: 100%;
+}
+@media (min-width: 2560px) {
+  .MenuPhoto {
+    height: 360px;
+  }
 }
 
 .CarteMenu {
@@ -444,7 +464,8 @@ footer .Infos {
   display: flex;
   justify-content: left;
   width: 100%;
-  margin-left: 0%;
+  margin: auto;
+  max-width: 900px;
 }
 .CarteMenu .CarteMenuConteneur .CarteMenuTitre {
   font-family: "shrikhandregular";
@@ -491,6 +512,8 @@ footer .Infos {
   .CarteMenu .ConteneurPlats {
     display: flex;
     justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
   }
 }
 
@@ -601,7 +624,7 @@ footer .Infos {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3em 4.5em;
+  margin: 3em 3.5em;
   padding: 1em 1.5em;
   font-family: "robotoregular";
   background: linear-gradient(#ff79da, #9356dc);
@@ -611,6 +634,9 @@ footer .Infos {
   box-shadow: 0px 3px 4px lightgray;
   cursor: pointer;
   transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .Commander:hover {
   filter: brightness(1.1);

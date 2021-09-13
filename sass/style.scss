@@ -1,56 +1,17 @@
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("fonts/shrikhand-regular-webfont.woff2") format("woff2"),
-    url("fonts/shrikhand-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotoregular";
-  src: url("fonts/roboto-regular-webfont.woff2") format("woff2"),
-    url("fonts/roboto-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotobold";
-  src: url("fonts/roboto-bold-webfont.woff2") format("woff2"),
-    url("fonts/roboto-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "robotolight";
-  src: url("fonts/roboto-light-webfont.woff2") format("woff2"),
-    url("fonts/roboto-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* fichiers de rangement annexes du css */
+@import "base.scss";
 @import "mixins.scss";
 @import "keyframes.scss";
-$primary: #9356dc;
-$secondary: #ff79da;
-$tertiary: #99e2d0;
-$anim-dur: 1s;
-$num-menus: 3;
-$anim-delay: $anim-dur / $num-menus;
-body {
-  margin: 0;
-}
+@import "variables.scss";
 
-/* spinning loader */
-
+/* loading spinner */
 .loading {
   background-color: #ff79d97e;
   position: fixed;
-  display: flex;
-  justify-content: center;
+  @include centrer;
   height: 100%;
   width: 100%;
   z-index: 900;
-  align-items: center;
-  justify-content: center;
   font-size: 40px;
   animation: filtre 2s 0.01s;
   animation-delay: 1.75s;
@@ -67,13 +28,9 @@ body {
   }
 }
 
+/* le header et son logo cliquable */
 header {
   background: #f2f2f2;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .logo {
@@ -87,6 +44,7 @@ a {
   box-shadow: 0px 3px 4px lightgray;
 }
 
+/* le prototype du formulaire de localisation */
 form {
   background-color: rgba(187, 174, 174, 0.37);
   height: 3em;
@@ -107,6 +65,7 @@ form {
   }
 }
 
+/* la section d'accroche promotionnelle */
 .accroche {
   display: flex;
   flex-direction: column;
@@ -140,6 +99,7 @@ form {
   }
 }
 
+/* la démo de fonctionnement du site */
 .fonctionnement {
   margin-left: 0.8em;
   margin-top: 2.5em;
@@ -148,8 +108,7 @@ form {
     margin-bottom: 3em;
   }
   @media (min-width: 1024px) {
-    max-width: 900px;
-    margin: auto;
+    @include largeur-desktop;
   }
   .fonctionnementTitre {
     font-family: "robotobold";
@@ -187,9 +146,7 @@ form {
 
 .fonctionnementDivisionChiffre {
   font-family: "robotolight";
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centrer;
   color: white;
   font-size: 0.8em;
   padding: 0.3em 0.2em;
@@ -223,6 +180,7 @@ form {
   color: $primary;
 }
 
+/* les restaurants partenaires */
 .Restaurants {
   background: #f2f2f2;
   padding-top: 2em;
@@ -230,8 +188,7 @@ form {
   .RestaurantsTitre {
     font-family: "robotobold";
     @media (min-width: 1024px) {
-      max-width: 900px;
-      margin: auto;
+      @include largeur-desktop;
       margin-bottom: 1em;
     }
   }
@@ -242,8 +199,7 @@ form {
   flex-direction: column;
   align-items: center;
   @media (min-width: 1024px) {
-    max-width: 900px;
-    margin: auto;
+    @include largeur-desktop;
   }
   .RestaurantCarte {
     display: block;
@@ -286,6 +242,8 @@ form {
   padding: 0.5em 0 0.5em 0.7em;
 }
 
+/* le coeur animé et sorti de la carte cliquable pour éviter l'accès accidentel
+à la carte des menus  */
 .conteneur-coeur {
   display: flex;
   justify-content: flex-end;
@@ -320,7 +278,8 @@ form {
   font-family: "robotolight";
 }
 
-/* Le footer */
+/* Le footer avec renvoi actif vers une adresse mail opérationnel sur l'élément
+Contact */
 footer {
   background: black;
   padding: 1em 0 1.5em 0.8em;
@@ -329,8 +288,7 @@ footer {
     color: white;
     font-size: medium;
     @media (min-width: 1024px) {
-      max-width: 900px;
-      margin: auto;
+      @include largeur-desktop;
       margin-bottom: 0.5em;
     }
   }
@@ -342,8 +300,7 @@ footer {
       flex-direction: row;
     }
     @media (min-width: 1024px) {
-      max-width: 900px;
-      margin: auto;
+      @include largeur-desktop;
     }
   }
 }
@@ -368,7 +325,6 @@ footer {
 /* La page de menu "La palette du goût" */
 
 /* Le header */
-
 .FlècheRetour {
   position: absolute;
   top: 1.5em;
@@ -386,6 +342,7 @@ footer {
 
 /* Le menu */
 
+/* la photo */
 .MenuPhoto {
   object-fit: cover;
   height: 180px;
@@ -395,6 +352,7 @@ footer {
   }
 }
 
+/* la carte */
 .CarteMenu {
   background: #f2f2f2;
   padding: 1em 1em 0.1em 1em;
@@ -406,8 +364,7 @@ footer {
     display: flex;
     justify-content: left;
     width: 100%;
-    margin: auto;
-    max-width: 900px;
+    @include largeur-desktop;
     .CarteMenuTitre {
       font-family: "shrikhandregular";
     }
@@ -417,6 +374,8 @@ footer {
       margin-left: 1em;
     }
   }
+
+  /* les différentes parties du menu et leur double animation attribuée */
   .Plats {
     font-family: "robotoregular";
     display: block;
@@ -436,8 +395,7 @@ footer {
     @media (min-width: 1024px) {
       display: flex;
       justify-content: space-between;
-      max-width: 900px;
-      margin: auto;
+      @include largeur-desktop;
     }
   }
 }
@@ -452,6 +410,8 @@ footer {
 .Conteneur {
   display: flex;
 }
+
+/* les plats individuels et leur animation de sélection */
 .DétailMenu {
   background: white;
   display: flex;
@@ -481,9 +441,7 @@ footer {
   }
   .selection {
     background: $tertiary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centrer;
     margin: -1em -5em -1em 2em;
     width: 3em;
     height: 3.8em;
@@ -494,9 +452,7 @@ footer {
       width: 1.7em;
       border-radius: 100%;
       background-color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include centrer;
       transform: rotate(-270deg);
       transition-duration: 1s;
       .coche {
@@ -545,10 +501,8 @@ footer {
 /* Le bouton de validation de commande */
 
 .Commander {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 3em 3.5em;
+  @include centrer;
+  margin: 3em 0;
   @include bouton;
   transition: filter 0.3s 0.1s ease-in, box-shadow 0.45s ease-out;
   max-width: 150px;

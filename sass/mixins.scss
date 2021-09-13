@@ -24,3 +24,14 @@
     -webkit-text-stroke-color: transparent;
   }
 }
+
+@mixin centrer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin largeur-desktop {
+  max-width: 900px;
+  margin: auto;
+}

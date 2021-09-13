@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* fichiers de rangement annexes du css */
+/* Les polices utilisées */
 @font-face {
   font-family: "shrikhandregular";
   src: url("fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("fonts/shrikhand-regular-webfont.woff") format("woff");
@@ -23,6 +25,16 @@
   font-weight: normal;
   font-style: normal;
 }
+/* Les règles agissant sur tout le site */
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 @keyframes coeur-anim {
   0% {
     opacity: 0.1;
@@ -60,21 +72,17 @@
     transform: translateY(0);
   }
 }
-body {
-  margin: 0;
-}
-
-/* spinning loader */
+/* Les variables utilisées */
+/* loading spinner */
 .loading {
   background-color: #ff79d97e;
   position: fixed;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   z-index: 900;
-  align-items: center;
-  justify-content: center;
   font-size: 40px;
   animation: filtre 2s 0.01s;
   animation-delay: 1.75s;
@@ -91,13 +99,9 @@ body {
   animation: rotation 2s linear infinite;
 }
 
+/* le header et son logo cliquable */
 header {
   background: #f2f2f2;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
 
 .logo {
@@ -111,6 +115,7 @@ a {
   box-shadow: 0px 3px 4px lightgray;
 }
 
+/* le prototype du formulaire de localisation */
 form {
   background-color: rgba(187, 174, 174, 0.37);
   height: 3em;
@@ -131,6 +136,7 @@ form .marqueur {
   margin-right: 1em;
 }
 
+/* la section d'accroche promotionnelle */
 .accroche {
   display: flex;
   flex-direction: column;
@@ -175,6 +181,7 @@ form .marqueur {
   box-shadow: 3px 3px 5px gray;
 }
 
+/* la démo de fonctionnement du site */
 .fonctionnement {
   margin-left: 0.8em;
   margin-top: 2.5em;
@@ -265,6 +272,7 @@ form .marqueur {
   color: #9356dc;
 }
 
+/* les restaurants partenaires */
 .Restaurants {
   background: #f2f2f2;
   padding-top: 2em;
@@ -331,6 +339,8 @@ form .marqueur {
   padding: 0.5em 0 0.5em 0.7em;
 }
 
+/* le coeur animé et sorti de la carte cliquable pour éviter l'accès accidentel
+à la carte des menus  */
 .conteneur-coeur {
   display: flex;
   justify-content: flex-end;
@@ -365,7 +375,8 @@ form .marqueur {
   font-family: "robotolight";
 }
 
-/* Le footer */
+/* Le footer avec renvoi actif vers une adresse mail opérationnel sur l'élément
+Contact */
 footer {
   background: black;
   padding: 1em 0 1.5em 0.8em;
@@ -442,6 +453,7 @@ footer .Infos {
 }
 
 /* Le menu */
+/* la photo */
 .MenuPhoto {
   object-fit: cover;
   height: 180px;
@@ -453,20 +465,22 @@ footer .Infos {
   }
 }
 
+/* la carte */
 .CarteMenu {
   background: #f2f2f2;
   padding: 1em 1em 0.1em 1em;
   border-radius: 30px 30px 0 0;
   margin-top: -2em;
   position: relative;
+  /* les différentes parties du menu et leur double animation attribuée */
 }
 .CarteMenu .CarteMenuConteneur {
   align-items: center;
   display: flex;
   justify-content: left;
   width: 100%;
-  margin: auto;
   max-width: 900px;
+  margin: auto;
 }
 .CarteMenu .CarteMenuConteneur .CarteMenuTitre {
   font-family: "shrikhandregular";
@@ -530,6 +544,7 @@ footer .Infos {
   display: flex;
 }
 
+/* les plats individuels et leur animation de sélection */
 .DétailMenu {
   background: white;
   display: flex;
@@ -623,9 +638,9 @@ footer .Infos {
 /* Le bouton de validation de commande */
 .Commander {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 3em 3.5em;
+  align-items: center;
+  margin: 3em 0;
   padding: 1em 1.5em;
   font-family: "robotoregular";
   background: linear-gradient(#ff79da, #9356dc);

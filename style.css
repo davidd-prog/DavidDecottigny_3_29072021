@@ -220,6 +220,7 @@ form .marqueur {
   margin-bottom: 1.5em;
   border-radius: 1em;
   margin-left: 1em;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .fonctionnement .fonctionnementDivisions .fonctionnementDivision, .fonctionnement .fonctionnementDivisions .fonctionnementDivisionStore {

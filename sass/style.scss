@@ -402,7 +402,7 @@ footer {
   margin-top: -2em;
   position: relative;
   .CarteMenuConteneur {
-    @extend .conteneur-coeur;
+    align-items: center;
     display: flex;
     justify-content: left;
     width: 100%;

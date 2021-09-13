@@ -331,13 +331,13 @@ form .marqueur {
   padding: 0.5em 0 0.5em 0.7em;
 }
 
-.conteneur-coeur, .CarteMenu .CarteMenuConteneur {
+.conteneur-coeur {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin-left: 85%;
 }
-.conteneur-coeur .coeur, .CarteMenu .CarteMenuConteneur .coeur {
+.conteneur-coeur .coeur {
   z-index: 1;
   margin-top: -4.8em;
   font-size: 1.5em;
@@ -347,7 +347,7 @@ form .marqueur {
   -webkit-text-stroke-color: black;
   cursor: pointer;
 }
-.conteneur-coeur .coeur:hover, .CarteMenu .CarteMenuConteneur .coeur:hover {
+.conteneur-coeur .coeur:hover {
   animation: coeur-anim 2s;
   font-weight: bold;
   background: linear-gradient(#9356dc, #ff79da);
@@ -461,6 +461,7 @@ footer .Infos {
   position: relative;
 }
 .CarteMenu .CarteMenuConteneur {
+  align-items: center;
   display: flex;
   justify-content: left;
   width: 100%;

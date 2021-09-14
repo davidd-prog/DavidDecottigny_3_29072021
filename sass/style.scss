@@ -188,6 +188,9 @@ form {
   padding-bottom: 2em;
   padding-left: 0.8em;
   padding-right: 0.8em;
+  @media (min-width: 1024px) {
+    margin-top: 1em;
+  }
   .RestaurantsTitre {
     font-family: "robotobold";
     @media (min-width: 1024px) {

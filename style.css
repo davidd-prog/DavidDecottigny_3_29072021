@@ -281,6 +281,11 @@ form .marqueur {
   padding-left: 0.8em;
   padding-right: 0.8em;
 }
+@media (min-width: 1024px) {
+  .Restaurants {
+    margin-top: 1em;
+  }
+}
 .Restaurants .RestaurantsTitre {
   font-family: "robotobold";
 }

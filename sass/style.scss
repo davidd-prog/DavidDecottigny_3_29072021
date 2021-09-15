@@ -13,8 +13,7 @@
   width: 100%;
   z-index: 900;
   font-size: 40px;
-  animation: filtre 2s 0.01s;
-  animation-delay: 1.75s;
+  animation: filtre 2s 1.75s;
   animation-fill-mode: both;
   &::after {
     content: "";
@@ -378,6 +377,7 @@ footer {
       @include coeur-rempli;
       cursor: pointer;
       margin-left: 1em;
+      font-size: 1.4em;
     }
   }
 
@@ -445,6 +445,8 @@ footer {
     transform: translateX(0px);
     transition-duration: 1s;
   }
+
+  /* l'animation de sélection */
   .selection {
     background: $tertiary;
     @include centrer;
@@ -500,12 +502,7 @@ footer {
   width: auto;
 }
 
-.CoeurMenu {
-  font-size: 1.4em;
-}
-
 /* Le bouton de validation de commande */
-
 .Commander {
   @include centrer;
   margin: 3em 0;

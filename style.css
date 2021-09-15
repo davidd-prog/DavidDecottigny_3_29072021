@@ -35,6 +35,7 @@ a {
   color: black;
 }
 
+/* Animation coeur */
 @keyframes coeur-anim {
   0% {
     opacity: 0.1;
@@ -43,7 +44,7 @@ a {
     opacity: 1;
   }
 }
-/* Animation spinning loader */
+/* Animation loading spinner */
 @keyframes rotation {
   from {
     transform: rotate(0turn);
@@ -62,6 +63,7 @@ a {
     z-index: -1;
   }
 }
+/* Animation appartition des menus de restaurants */
 @keyframes menu-anim {
   from {
     opacity: 0;
@@ -84,8 +86,7 @@ a {
   width: 100%;
   z-index: 900;
   font-size: 40px;
-  animation: filtre 2s 0.01s;
-  animation-delay: 1.75s;
+  animation: filtre 2s 1.75s;
   animation-fill-mode: both;
 }
 .loading::after {
@@ -501,6 +502,7 @@ footer .Infos {
   -webkit-text-stroke-color: black;
   cursor: pointer;
   margin-left: 1em;
+  font-size: 1.4em;
 }
 .CarteMenu .CarteMenuConteneur .CoeurMenu:hover {
   animation: coeur-anim 2s;
@@ -566,6 +568,7 @@ footer .Infos {
   box-shadow: 0px 3px 4px lightgray;
   overflow: hidden;
   cursor: pointer;
+  /* l'animation de sélection */
 }
 .DétailMenu .DétailMenuEcriture {
   flex: 1;
@@ -637,10 +640,6 @@ footer .Infos {
   margin-top: 0;
   margin-bottom: 0.5em;
   width: auto;
-}
-
-.CoeurMenu {
-  font-size: 1.4em;
 }
 
 /* Le bouton de validation de commande */
